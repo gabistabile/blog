@@ -162,7 +162,6 @@ string $ordem = null) : array
     }
 
     $instrucao = select($entidade, $campos, $coringa_criterio, $ordem);
-    
     $conexao = conecta();
 
     $stmt = mysqli_prepare($conexao, $instrucao);

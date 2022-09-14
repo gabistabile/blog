@@ -22,8 +22,7 @@
                             include 'includes/menu.php';
                         ?>
                     </div>
-                </div>
-                <div class="col-md-10" style="padding-top: 50px;">
+                    <div class="col-md-10" style="padding-top: 5px;">
                     <!-- Conteúdo //-->
                     <h2>Página Inicial</h2>
 
@@ -73,6 +72,8 @@
                     ?>
 
                 </div>
+                </div>
+                
                     <div class="list-group">
                         <?php
                         foreach($posts as $post):
