@@ -96,7 +96,7 @@ function deleta(string $entidade, array $criterio = []) : bool
     $coringa_criterio = [];
 
     foreach ($criterio as $expressao){
-        $dado = $expressao[count($expresssao) -1];
+        $dado = $expressao[count($expressao) -1];
 
         $tipo[] = gettype($dado) [0];
         $expressao[count($expressao) - 1] = '?';
@@ -162,7 +162,7 @@ string $ordem = null) : array
     }
 
     $instrucao = select($entidade, $campos, $coringa_criterio, $ordem);
-
+    
     $conexao = conecta();
 
     $stmt = mysqli_prepare($conexao, $instrucao);
