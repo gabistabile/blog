@@ -15,7 +15,7 @@ foreach($_GET as $indice => $dado){
 }
 
 switch($acao){
-        case 'insert';
+        case 'insert':
             $dados = [
                 'nome'  => $nome,
                 'email' => $email,
@@ -58,9 +58,10 @@ switch($acao){
                 $criterio
             );
             
-            if(count($retorno) > 0){
+            if(count($retorno) > 0){                
                 if(crypt($senha,$salt) == $retorno[0]['senha']){
-                    $_SESSION['login'] ['usuario'] = $retorno[0];
+                    
+                    $_SESSION['login']['usuario'] = $retorno[0];                   
                     
                     if(!empty ($_SESSION['url_retorno'])){
                         header('Location: ' . $_SESSION['url_retorno']);
@@ -71,7 +72,7 @@ switch($acao){
             }
 
             break;
-        case 'logout';
+        case 'logout':            
             session_destroy();
             break;
         case 'status':
@@ -117,5 +118,5 @@ switch($acao){
                 exit;
                 break;
 }
-//header('Location: ../index.php');
+header('Location: ../index.php');
 ?>
